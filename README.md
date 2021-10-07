@@ -20,8 +20,8 @@ As shown in the demo video linked above, this system allows the user to interact
 ***
 ## Design
 The physical product was designed with simplicity in mind. We opted to keep the sensors lined up on the left side of the bread board and I/O on the right side. The button and potentiometer are set towards the front of the board while the sensors are tucked to the back. The LCD screen is off to the side so it can be aligned to the user's preference. This allows a user with less experience to easily interact with the product and find the compoinents they are looking for.
-***
-The code is allows more experienced users to adjust the range appropriate for their needs. The warning light can be adjusted to be more or less restrictive based on individual sensor data collected, and the water level should be adjusted after testing local conditions (as impurities in the water can give different readings).
+
+The code allows more experienced users to adjust the range appropriate for their needs. The warning light can be adjusted to be more or less restrictive based on individual sensor data collected, and the water level should be adjusted after testing local conditions (as impurities in the water can give different readings).
 ***
 ## Sensors
 * DHT11 - Temperature and humidity sensor
