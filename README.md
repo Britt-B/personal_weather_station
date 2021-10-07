@@ -25,7 +25,7 @@ The code allows more experienced users to adjust the range appropriate for their
 ***
 ## Sensors
 * DHT11 - Temperature and humidity sensor
-* Photocell - light levels (ohms)
+* CDS*3 Photocell - light levels (ohms)
 * MQ135 - air quality/gas sensor (parts per million) [NH3, NOx, alcohol, Benzene, smoke, CO2]
 * ARCELI Hygrometer - water level sensor
 ***

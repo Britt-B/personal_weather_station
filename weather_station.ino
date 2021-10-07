@@ -1,22 +1,22 @@
-#include <DHT.h>
-#include <DHT_U.h>
-
 /*
- *  Use:    Reads in atmospheric conditions and displays results on lcd screen 
+ *  Use:    Reads in atmospheric conditions and displays results on lcd screen
  *  Input:  DHT11 (temp and humidity), CDS*3 (light levels), Push Button (pressed/not pressed)
  *  Output: LCD screen
  */
- 
-#include <LiquidCrystal.h>
 
-LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+#include <DHT.h>			//import DHT/DHT unified library
+#include <DHT_U.h>
+#include <LiquidCrystal.h>		//import for lcd display library
 
+//pin assignment
 #define lightSensor A5
 #define waterSensor A3
 #define gasSensor A0
 #define DHTPIN 13
 #define DHTTYPE DHT11
 
+//initialize lcd and dht settings using libraries
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);  //rs, enable, d4, d5. d6. d7
 DHT dht(DHTPIN, DHTTYPE);
 
 void setup(){
@@ -28,7 +28,7 @@ void setup(){
   pinMode(10, OUTPUT);  //blue
   
   Serial.begin(9600);
-  // lcd dimensions
+  // lcd dimensions - 16 char columns, 2 rows
   lcd.begin(16, 2);
 }
 
@@ -39,7 +39,7 @@ int screenDisplay = 1;
 
 void loop(){
   /*
-   * read in sensor values (DHT, photo, and button
+   * read in sensor values (DHT11, photocell,gas, water) and button value
    */
   //read in button status
   lastButton = digitalRead(8);
@@ -72,7 +72,7 @@ void loop(){
   }
 
   /*
-   * screen controls
+   * screen controls based on button status
    * 1 = humidity
    * 2 = light level
    * 3 = gas sensor
