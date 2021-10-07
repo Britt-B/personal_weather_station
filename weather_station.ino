@@ -39,7 +39,7 @@ int screenDisplay = 1;
 
 void loop(){
   /*
-   * read in sensor values (DHT11, photocell,gas, water) and button value
+   * read in sensor values (DHT11, photocell, gas, water) and button value
    */
   //read in button status
   lastButton = digitalRead(8);
