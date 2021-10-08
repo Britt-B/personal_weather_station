@@ -35,4 +35,4 @@ The code allows more experienced users to adjust the range appropriate for their
 * Check that IDE is connected to the correct port and Arduino Uno model is detected
 * Import dht11 library
 * Compile and run code using IDE
-* Code should upload to Uno, system will run connected to computer or external opower supply
+* Code should upload to Uno, system will run connected to computer or external power supply
